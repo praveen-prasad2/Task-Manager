@@ -1,0 +1,211 @@
+/* MAIN  */
+
+
+.contentwrapper{
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* CARDS */
+
+.card {
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+    background-color: #F8FBFE;
+    border-radius: 50px;
+    z-index: 1;
+    box-shadow:  5px 5px 20px #000;
+   }
+   
+   .tools {
+    display: flex;
+    align-items: center;
+    margin-left: 18px;
+   }
+
+   .circles{
+    display: flex;
+    flex-direction: row;
+   }
+   
+   .circle {
+    padding: 0 4px;
+   }
+   
+   .box {
+    display: inline-block;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    border-radius: 50%;
+   }
+   
+   .red {
+    background-color: #ff605c;
+   }
+   
+   .yellow {
+    background-color: #ffbd44;
+   }
+   
+   .green {
+    background-color: #00ca4e;
+   }
+
+   .taskname{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 20px;
+    margin-left: 50px;
+    opacity: .6;
+   }
+
+   .taskname:hover{
+    color:#645bff;
+   }
+
+   .description{
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 18px;
+   }
+   
+   .description:hover{
+    color:#645bff;
+   }
+
+   .cardcontent{
+    margin-left: 10px;
+   }
+
+
+   /* EDIT BUTTON*/
+
+.edit{
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 1px solid #03045e;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    margin-left: 5px;
+    z-index: 1;
+   }
+
+   .edit .icon{
+    font-size: 0px;
+   }
+   
+   .edit::before,
+   .edit::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+   }
+   
+   .edit::before {
+    left: -10px;
+    background: #240046;
+   }
+   
+   .edit::after {
+    right: -10px;
+    background: #5a189a;
+   }
+   
+   .edit:hover::before,
+   .edit:hover::after {
+    width: 58%;
+   }
+   
+   .edit:hover span {
+    color: #e0aaff;
+    transition: 0.3s;
+   }
+   
+   .edit span {
+    color: #03045e;
+    font-size: 18px;
+    transition: all 0.3s ease-in;
+   }
+
+   /* DELETE BUTTON  */
+
+   /* CHECKBOX */
+
+   /* Hide the default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  
+}
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+  user-select: none;
+  margin-left: px;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 1.3em;
+  width: 1.3em;
+  background-color: #e5e5e5;
+  border-radius: 50%;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: seagreen;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 0.45em;
+  top: 0.25em;
+  width: 0.25em;
+  height: 0.5em;
+  border: solid white;
+  border-width: 0 0.15em 0.15em 0;
+  transform: rotate(45deg);
+}
+
+.options{
+    display: flex;
+    justify-content: space-around;
+}

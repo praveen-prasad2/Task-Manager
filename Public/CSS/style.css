@@ -1,11 +1,21 @@
+
+.head{
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.head:hover{
+  color:#645bff;
+ }
+
+
 .mainframe{
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
     padding: 10px;
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     border-radius: 85px;
 background-color: #f8fbfe;
 border-radius: 50px;
@@ -21,6 +31,9 @@ flex-direction: column;
     padding: 9px;
    }
    
+   .alllink{
+    text-decoration: none;
+   }
    .circle {
     padding: 0 4px;
    }
@@ -52,7 +65,7 @@ flex-direction: column;
     flex-direction: column;
    }
 
-   /* SAVE BUTTON */
+   /* SAVE .all */
 
    .savetask {
     --primary-color: #645bff;
@@ -157,3 +170,126 @@ flex-direction: column;
     border-color: rgb(150, 150, 200);
   }
    
+/* INPUT DESCRIPTION */
+
+/* INPUT */
+
+.inputGroup2 {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 1em 0 1em 0;
+  max-width: 190px;
+  position: relative;
+}
+
+.inputGroup2 input {
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.inputGroup2 label {
+  font-size: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 0.8em;
+  margin-left: 0.5em;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  color: rgb(100, 100, 100);
+}
+
+.inputGroup2 :is(input:focus, input:valid)~label {
+  transform: translateY(-50%) scale(.9);
+  margin: 0em;
+  margin-left: 1.3em;
+  padding: 0.4em;
+  background-color: #fff;
+}
+
+.inputGroup2 :is(input:focus, input:valid) {
+  border-color: rgb(150, 150, 200);
+}
+ 
+
+/* ALL TASK Button  */
+
+.all {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100px;
+  height: 42.65px;
+
+  margin-left: 20px;
+  border-radius: 20px;
+  background: #645bff;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+ }
+ 
+ .all:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+ }
+ 
+ .all:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+ }
+ 
+ .all span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+ }
+ 
+ .all:hover span {
+  color: #000;
+  animation: scaleUp 0.3s ease-in-out;
+ }
+ 
+ @keyframes scaleUp {
+  0% {
+   transform: scale(1);
+  }
+ 
+  50% {
+   transform: scale(0.95);
+  }
+ 
+  100% {
+   transform: scale(1);
+  }
+ }
+ 
+
+ .buttons{
+  display: flex;
+  width: 200px;
+  flex-direction: row;
+  justify-content: space-between;
+ }
+
