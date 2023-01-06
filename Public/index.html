@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TASK MANAGER</title>
-    <link rel="stylesheet" href="./CSS/style.css">
-</head>
-<body>
-    
 
-    <div class="mainframe">
-        <!-- CARD -->
-        <div class="card">
-            <div class="tools">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Tasks</title>
+  <link rel="stylesheet" href="./CSS/alltask.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+  <!-- -------------------------------------------------------------------------------------------- -->
+
+  <div class="contentwrapper" id="main">
+
+    <div class="cards">
+      <div class="card">
+        <div class="content">
+          <div class="tools">
+            <div class="circles">
               <div class="circle">
                 <span class="red box"></span>
               </div>
@@ -24,45 +34,39 @@
                 <span class="green box"></span>
               </div>
             </div>
-            <div class="card__content">
-            </div>
+            <h5 class="taskname">${task.taskname}</h5>
           </div>
 
-        
-        <div class="content">
-            <h1 class="head">ADD TASK</h1>
-        <form action="">
-            <div class="inputGroup">
-                <input type="text" required="" autocomplete="off">
-                <label for="name">Task Name</label><br><br>
-
-            </div>
-            <div class="inputGroup2">
-            <input type="text" required="" autocomplete="off">
-                <label for="desc">Description</label><br><br>
-                
-            </div><br><br>
-            <!-- <label for="name">Description :</label>
-            <input type="text"><br><br> -->
-
-            <div class="buttons">
-              <button class="savetask">Save
-                <div class="arrow-wrapper">
-                    <div class="arrow"></div>
-            
-                </div>
-              
-                <a class="alllink" href="./alltask.html"></button>
-                <button class="all">
-                  <span>All Task</span>
-                </button></a>
-                  </div>
-            </form>
-          
-    </div>
-        
+          <div class="cardcontent">
+            <p class="description">${task.description}</p>
+          </div>
+          <div class="options">
+            <button class="edit">
+              <span> <i class="fa-solid fa-pen-to-square"></i>
+              </span>
+            </button>
+            <button class="delete edit">
+              <span> <i class="fa-solid fa-trash"></i>
+              </span>
+            </button>
+            <label class="container ">
+              <input checked="checked" type="checkbox">
+              <div class="checkmark"></div>
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
 
-   
+    <!-- -------------------------------------------------------------------------------------------------------------- -->
+
+
+
+
+
+
+  </div>
+  <script src="index.js"></script>
 </body>
+
 </html>

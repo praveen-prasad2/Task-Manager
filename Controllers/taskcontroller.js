@@ -11,9 +11,15 @@ const addTask = async (req, res) => {
 const getAllTask = async (req,res) => {
     try {
         let alltask = await TaskModel.find(req.body)
-        res.send(alltask)
+        res.json({
+            success:true,
+            message:"Got all Tasks",
+            alltask
+        })
     } catch (error) {
-        res.json("cant get all task")
+        res.json({
+            success:false,
+        message:"can't get all task"})
     }
 }
 const getOneTask = async (req,res) => {
