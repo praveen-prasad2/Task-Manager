@@ -4,8 +4,10 @@
 .contentwrapper {
   display: flex;
   flex-direction: row;
-  margin-left: 100px;
+  /* margin-left: 100px; */
   margin-top: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cards {
@@ -23,6 +25,7 @@
   border-radius: 50px;
   z-index: 1;
   box-shadow: 5px 5px 20px #000;
+  margin-bottom: 20px;
 }
 
 .tools {

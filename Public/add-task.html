@@ -31,14 +31,14 @@
         
         <div class="content">
             <h1 class="head">ADD TASK</h1>
-        <form action="">
+        <form action="post" id="form">
             <div class="inputGroup">
-                <input type="text" required="" autocomplete="off">
+                <input type="text" required="" autocomplete="off" class="taskname">
                 <label for="name">Task Name</label><br><br>
 
             </div>
             <div class="inputGroup2">
-            <input type="text" required="" autocomplete="off">
+            <input type="text" required="" autocomplete="off" class="decription">
                 <label for="desc">Description</label><br><br>
                 
             </div><br><br>
@@ -46,14 +46,14 @@
             <input type="text"><br><br> -->
 
             <div class="buttons">
-              <button class="savetask">Save
+              <button class="savetask" type="submit">Save
                 <div class="arrow-wrapper">
                     <div class="arrow"></div>
             
                 </div>
               
                 <a class="alllink" href="./alltask.html"></button>
-                <button class="all">
+                <button class="all" type="button">
                   <span>All Task</span>
                 </button></a>
                   </div>
@@ -62,7 +62,7 @@
     </div>
         
     </div>
-
-   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   <script src="addtask.js"></script>
 </body>
 </html>
