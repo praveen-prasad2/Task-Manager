@@ -3,9 +3,15 @@ const TaskModel = require("../Models/taskmodel")
 const addTask = async (req, res) => {
     try {
         let data = await TaskModel.create(req.body)
-        res.send(data)
+        res.json({
+            success:true,
+            message:"Task added successfully",
+            data
+        })
     } catch (error) {
-        res.json("Error")
+        res.json({
+            success:false,
+        message:"Task adding unsuccessful"})
     }
 }
 const getAllTask = async (req,res) => {
