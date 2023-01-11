@@ -31,22 +31,47 @@ const getAllTask = async (req,res) => {
 const getOneTask = async (req,res) => {
     try {
         let task = await TaskModel.findOne({ _id: req.params.id })
-        res.json(task)
+        res.json({
+            success:true,
+            message:"Got Task",
+            task
+        })
     } catch (error) {
-        res.json("cant get task")
+        res.json({
+            success:false,
+        message:"can't get task"})
     }
 }
 const updateTask = async (req,res) => {
 
     let newtask = await TaskModel.findOneAndUpdate({ _id: req.params.id }, req.body)
-    res.json({
-        success: true,
-        message: "updated succesfully"
-    })
+   
+    try {
+        res.json({
+            success: true,
+            message: "updated succesfully"
+        })
+    } catch (error) {
+        res.json({
+            success: false,
+            message: "update unsuccessful"
+        })
+    }
 
 }
 const deleteTask = async (req, res) => {
     let deltask = await TaskModel.findOneAndDelete({ _id: req.params.id })
-    res.json(deltask)
+    try {
+
+        res.json({
+            success: true,
+            message: "deleted succesfully"
+        })    
+    } catch (error) {
+        res.json({
+            success: false,
+            message: "delete unsuccessful"
+        })
+    }
 }
 module.exports = { addTask, getAllTask, getOneTask, updateTask, deleteTask }

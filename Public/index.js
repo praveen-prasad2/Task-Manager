@@ -92,7 +92,7 @@ async function  fetchData()  {
     </div>
     <div class="options">
       <button class="edit">
-        <span> <i class="fa-solid fa-pen-to-square"></i>
+        <span>  <a href="http://localhost:5000/edit-task.html?id=${task._id}"><i class="fa-solid fa-pen-to-square"></i></a>
         </span>
       </button>
       <button class="delete edit">
@@ -116,3 +116,12 @@ async function  fetchData()  {
 }
 
 fetchData()
+
+
+// EDIT TASK
+
+let edited=document.querySelector(".edit")
+edited.addEventListener("click",function(){
+  location.href="edit-task.html"
+})
+
