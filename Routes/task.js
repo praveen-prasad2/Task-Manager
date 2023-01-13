@@ -7,7 +7,7 @@ router.post("/task", addTask)
 router.get("/get-all-task", getAllTask)
 router.get("/get-one-task/:id", getOneTask)
 router.patch("/update-task/:id", updateTask)
-router.get("/delete-task/:id", deleteTask)
+router.delete("/delete-task/:id", deleteTask)
 
 
 module.exports = router
